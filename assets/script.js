@@ -17,7 +17,13 @@ $(document).ready(function(){
 
  var button9 = $("btn9");
  var button10 = $("btn10");
- var button111 =$("btn11") 
+ var button11 = $("btn11");
+ var button12 = $("btn12");
+ var button1 = $("btn1");
+ var button2 = $("btn2");
+ var button3 = $("btn3");
+ var button4 = $("btn4");
+ var button5 = $("btn5");
 
 
  div1.val(localStorage.getItem("enter1"));
@@ -33,7 +39,7 @@ $(document).ready(function(){
 
 
 
-
+ // Definitions of Functions
 
  var today = moment();$("#currentDay").text(today.format("dddd MMMM Do"));
 

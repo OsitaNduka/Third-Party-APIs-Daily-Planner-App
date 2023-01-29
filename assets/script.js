@@ -26,15 +26,43 @@ $(document).ready(function(){
  var button5 = $("btn5");
 
 
- div1.val(localStorage.getItem("enter1"));
- div2.val(localStorage.getItem("enter2"));
- div3.val(localStorage.getItem("enter3"));
- div4.val(localStorage.getItem("enter4"));
- div5.val(localStorage.getItem("enter5"));
- div9.val(localStorage.getItem("enter9"));
- div10.val(localStorage.getItem("enter10"));
- div11.val(localStorage.getItem("enter11"));
- div12.val(localStorage.getItem("enter12"));
+// Save the event in local storage
+
+ 
+function setItems(){
+    localStorage.setItem("Entry9am", div9.val());
+    localStorage.setItem("Entry10am", div10.val());
+    localStorage.setItem("Entry11am", div11.val());
+    localStorage.setItem("Entry12pm", div12.val());
+    localStorage.setItem("Entry1pm", div1.val());
+    localStorage.setItem("Entry2pm", div2.val());
+    localStorage.setItem("Entry3pm", div3.val());
+    localStorage.setItem("Entry4pm", div4.val());
+    localStorage.setItem("Entry5pm", div5.val());
+}
+
+ var div9 = $("#entry9am");
+ var div10 = $("#entry10pm");
+ var div11 = $("#entry11pm");
+ var div12 = $("#entry12pm");
+ var div1 = $("#entry1pm");
+ var div2 = $("#entry2pm");
+ var div3 = $("#entry3pm");
+ var div4 = $("#entry4pm");
+ var div5 = $("#entry5pm");
+
+
+ 
+ var prevEntry1pm = (localStorage.getItem("Entry1pm"));
+ console.log(prevEntry1pm);
+ var prevEntry2pm = div2.val(localStorage.getItem("Entry2pm"));
+ div3.val(localStorage.getItem("Entry3pm"));
+ div4.val(localStorage.getItem("Entry4pm"));
+ div5.val(localStorage.getItem("Entry5pm"));
+ div9.val(localStorage.getItem("Entry9am"));
+ div10.val(localStorage.getItem("Entry10am"));
+ div11.val(localStorage.getItem("Entry11am"));
+ div12.val(localStorage.getItem("Entry12pm"));
 
 
 
@@ -47,14 +75,33 @@ $(document).ready(function(){
 
  function checkTime() {
     var today = setInterval(function () {
-      updateCurrentTime();
+      currentDay();
     }, 1000);
   }
 
 
+ function clock() {
+    currentDay.text(moment().format('LL'));
+    display.text(moment().format("hh:mm:ssA"));
+    $(".jumbotron").append(currentDay);
+    $(".jumbotron").append(".display");
 
+ }
 
+ function checkTime(){
+    if (currentDay(div12.attr("data-hour")) > today){
+        div12.removeClass("past present future");
+        div12.addClass("future");
 
+    } else if (currentDay(div12.attr("data-hour"))===today) {
+        div12.removeClass("past present future");
+        div12.addClass("present");
+
+    } else {
+        div12.removeClass("past present future");
+        div12.addClass("present");
+    }
+ }
 
 
 

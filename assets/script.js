@@ -49,7 +49,7 @@ function setItems(){
     localStorage.setItem("Entry5pm", div5.val());
 }
 
-//setItems();
+ setItems();
    // html id's
  var div9 = $("#entry9am");
  var div10 = $("#entry10pm");

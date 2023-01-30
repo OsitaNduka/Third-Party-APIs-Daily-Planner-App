@@ -28,13 +28,18 @@ $(document).ready(function(){
 
 // Save the event in local storage
 button9.click(function(event) {
-    console.log("click");
+   // console.log("click");
     console.log(event.target);
     //console.log(event.target.val());
     var value9am = $("#div9").val();
     console.log(value9am);
 
-    localStorage.setItem("Entry9am", JSON.stringify($('#btn9').val()));
+    localStorage.setItem("Entry9am", JSON.stringify($("#btn9").val()));
+
+    button10.click(function(event){
+        var value10am = $("#div10").val();
+        localStorage.setItem("Entry10am", JSON.stringify($("#btn10").val()));
+    })
 });
  
 function setItems(){

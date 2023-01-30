@@ -15,19 +15,27 @@ $(document).ready(function(){
  var div4 = $("#div4");
  var div5 = $("#div5");
 
- var button9 = $("btn9");
- var button10 = $("btn10");
- var button11 = $("btn11");
- var button12 = $("btn12");
- var button1 = $("btn1");
- var button2 = $("btn2");
- var button3 = $("btn3");
- var button4 = $("btn4");
- var button5 = $("btn5");
+ var button9 = $("#btn9");
+ var button10 = $("#btn10");
+ var button11 = $("#btn11");
+ var button12 = $("#btn12");
+ var button1 = $("#btn1");
+ var button2 = $("#btn2");
+ var button3 = $("#btn3");
+ var button4 = $("#btn4");
+ var button5 = $("#btn5");
 
 
 // Save the event in local storage
+button9.click(function(event) {
+    console.log("click");
+    console.log(event.target);
+    //console.log(event.target.val());
+    var value9am = $("#div9").val();
+    console.log(value9am);
 
+    localStorage.setItem("Entry9am", JSON.stringify($('#btn9').val()));
+});
  
 function setItems(){
     localStorage.setItem("Entry9am", div9.val());
@@ -41,6 +49,8 @@ function setItems(){
     localStorage.setItem("Entry5pm", div5.val());
 }
 
+//setItems();
+   // html id's
  var div9 = $("#entry9am");
  var div10 = $("#entry10pm");
  var div11 = $("#entry11pm");
@@ -51,34 +61,48 @@ function setItems(){
  var div4 = $("#entry4pm");
  var div5 = $("#entry5pm");
 
-
+  //HTML id link to variables
  
- var prevEntry1pm = (localStorage.getItem("Entry1pm"));
- console.log(prevEntry1pm);
- var prevEntry2pm = div2.val(localStorage.getItem("Entry2pm"));
- div3.val(localStorage.getItem("Entry3pm"));
- div4.val(localStorage.getItem("Entry4pm"));
- div5.val(localStorage.getItem("Entry5pm"));
- div9.val(localStorage.getItem("Entry9am"));
- div10.val(localStorage.getItem("Entry10am"));
- div11.val(localStorage.getItem("Entry11am"));
- div12.val(localStorage.getItem("Entry12pm"));
+  
+  
+  function getItems (){
+    var prevEntry1pm = localStorage.getItem("Entry1pm");
+    console.log(prevEntry1pm);
+    var prevEntry2pm = localStorage.getItem("Entry2pm");
+    var prevEntry3pm = localStorage.getItem("Entry3pm");
+    var prevEntry4pm = localStorage.getItem("Entry4pm");
+    var prevEntry5pm = localStorage.getItem("Entry5pm");
+    var prevEntry9am = localStorage.getItem("Entry9am");
+    var prevEntry10am = localStorage.getItem("Entry10am");
+    var prevEntry11am = localStorage.getItem("Entry11am");
+    var prevEntry12pm = localStorage.getItem("Entry12pm");
+
+    console.log("9AM: ", localStorage.getItem("Entry9am"));
+    console.log("10AM: ", localStorage.getItem("Entry10am"));
+    //console.log("10AM: ", prevEntry10am);
+ }
 
 
+ getItems();
 
 
  // Definitions of Functions
 
- var today = moment();$("#currentDay").text(today.format("dddd MMMM Do"));
+ var today = moment();
+ //console.log("Today: ", today)
+ //$("#currentDay").text(today.format("dddd MMMM Do"));
 
- $("#currentDay").text(today.format("MMMM Do YYYY, hh:mm:ss"));
+ 
+ function updateTime() {
+     var timeInterval = setInterval(function () {
+        // currentDay();
+        //console.log("Loop:"  , moment().format("MMMM Do YYYY, hh:mm:ss"));
+        $("#currentDay").text(moment().format("MMMM Do YYYY, hh:mm:ss"));
 
- function checkTime() {
-    var today = setInterval(function () {
-      currentDay();
     }, 1000);
   }
 
+  updateTime();
 
  function clock() {
     currentDay.text(moment().format('LL'));
@@ -88,7 +112,7 @@ function setItems(){
 
  }
 
- function checkTime(){
+ function timeblock(){
     if (currentDay(div12.attr("data-hour")) > today){
         div12.removeClass("past present future");
         div12.addClass("future");

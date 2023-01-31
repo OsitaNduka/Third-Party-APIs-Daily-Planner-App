@@ -17,7 +17,7 @@ The App saves the event in the local storage when the the save button is clicked
 
 This is an App that allows an employee with a busy shedule to add important events to a daily planner so that they can manage their time effectively.
 
-![AppScreenshort] 
+![AppScreenshort]()
 
 
 ## Credits

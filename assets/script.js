@@ -179,105 +179,105 @@ $(document).ready(function(){
     div11.removeClass("past present future");
     div11.addClass("future");
 
-} else if (currentDay(div11.attr("data-hour"))===today) {
+ } else if (currentDay(div11.attr("data-hour"))===today) {
     div11.removeClass("past present future");
     div11.addClass("present");
 
-} else {
+ } else {
     div11.removeClass("past present future");
     div11.addClass("present");
-}
+ }
 
-if (currentDay(div10.attr("data-hour")) > today){
+ if (currentDay(div10.attr("data-hour")) > today){
     div10.removeClass("past present future");
     div10.addClass("future");
 
-} else if (currentDay(div10.attr("data-hour"))===today) {
+ } else if (currentDay(div10.attr("data-hour"))===today) {
     div10.removeClass("past present future");
     div10.addClass("present");
 
-} else {
+ } else {
     div10.removeClass("past present future");
     div10.addClass("present");
-}
+ }
 
-if (currentDay(div9.attr("data-hour")) > today){
+ if (currentDay(div9.attr("data-hour")) > today){
     div9.removeClass("past present future");
     div9.addClass("future");
 
-} else if (currentDay(div9.attr("data-hour"))===today) {
+ } else if (currentDay(div9.attr("data-hour"))===today) {
     div9.removeClass("past present future");
     div9.addClass("present");
 
-} else {
+ } else {
     div9.removeClass("past present future");
     div9.addClass("present");
-}
+ }
 
-if (currentDay(div1.attr("data-hour")) > today){
+ if (currentDay(div1.attr("data-hour")) > today){
     div1.removeClass("past present future");
     div1.addClass("future");
 
-} else if (currentDay(div1.attr("data-hour"))===today) {
+ } else if (currentDay(div1.attr("data-hour"))===today) {
     div1.removeClass("past present future");
     div1.addClass("present");
 
-} else {
+ } else {
     div1.removeClass("past present future");
     div1.addClass("present");
-}
+ }
 
-if (currentDay(div2.attr("data-hour")) > today){
+ if (currentDay(div2.attr("data-hour")) > today){
     div2.removeClass("past present future");
     div2.addClass("future");
 
-} else if (currentDay(div2.attr("data-hour"))===today) {
+ } else if (currentDay(div2.attr("data-hour"))===today) {
     div2.removeClass("past present future");
     div2.addClass("present");
 
-} else {
+ } else {
     div2.removeClass("past present future");
     div2.addClass("present");
-}
+ }
 
-if (currentDay(div3.attr("data-hour")) > today){
+ if (currentDay(div3.attr("data-hour")) > today){
     div3.removeClass("past present future");
     div3.addClass("future");
 
-} else if (currentDay(div3.attr("data-hour"))===today) {
+ } else if (currentDay(div3.attr("data-hour"))===today) {
     div3.removeClass("past present future");
     div3.addClass("present");
 
-} else {
+ } else {
     div3.removeClass("past present future");
     div3.addClass("present");
-}
+ }
 
-if (currentDay(div4.attr("data-hour")) > today){
+ if (currentDay(div4.attr("data-hour")) > today){
     div4.removeClass("past present future");
     div4.addClass("future");
 
-} else if (currentDay(div4.attr("data-hour"))===today) {
+ } else if (currentDay(div4.attr("data-hour"))===today) {
     div4.removeClass("past present future");
     div4.addClass("present");
 
-} else {
+ } else {
     div4.removeClass("past present future");
     div4.addClass("present");
-}
+ }
 
-if (currentDay(div5.attr("data-hour")) > today){
+ if (currentDay(div5.attr("data-hour")) > today){
     div5.removeClass("past present future");
     div5.addClass("future");
 
-} else if (currentDay(div5.attr("data-hour"))===today) {
+ } else if (currentDay(div5.attr("data-hour"))===today) {
     div5.removeClass("past present future");
     div5.addClass("present");
 
-} else {
+ } else {
     div5.removeClass("past present future");
     div5.addClass("present");
-}
+ }
 
 
 

@@ -26,23 +26,66 @@ $(document).ready(function(){
  var button5 = $("#btn5");
 
 
-// Save the event in local storage
-button9.click(function(event) {
+ // Save the event in local storage
+ button9.click(function(event) {
    // console.log("click");
-    console.log(event.target);
+    //console.log(event.target);
     //console.log(event.target.val());
     var value9am = $("#div9").val();
-    console.log(value9am);
+    //console.log(value9am);
 
     localStorage.setItem("Entry9am", JSON.stringify($("#btn9").val()));
+ });
 
-    button10.click(function(event){
-        var value10am = $("#div10").val();
-        localStorage.setItem("Entry10am", JSON.stringify($("#btn10").val()));
-    })
+ button10.click(function(event){
+    var value10am = $("#div10").val();
+    localStorage.setItem("Entry10am", JSON.stringify($("#btn10").val()));
+    //console.log(value10am)
+ });
+
+ button11.click(function(event){
+    var value11am = $("#div11").val();
+    localStorage.setItem("Entry11am", JSON.stringify($("#btn11").val()));
+    //console.log(value11am);
+ });
+
+ button12.click(function(event){
+    var value12pm = $("#div12").val();
+    localStorage.setItem("Entry12pm", JSON.stringify($("#btn12").val()));
+    //console.log(value12pm);
+ });
+
+ button1.click(function(event){
+    var value1pm = $("#div1").val();
+    localStorage.setItem("Entry1pm", JSON.stringify($("#btn1").val()));
+    //console.log(value1pm);
+ });
+
+ button2.click(function(event){
+    var value2pm = $("#div2").val();
+    localStorage.setItem("Entry2pm", JSON.stringify($("#btn2").val()));
+    //console.log(value2pm);
+ });
+
+ button3.click(function(event){
+    var value3pm = $("#div3").val();
+    localStorage.setItem("Entry3pm", JSON.stringify($("#btn3").val()));
+    //console.log(value3pm);
+ });
+
+ button4.click(function(event){
+    var value4pmm = $("#div4").val();
+    localStorage.setItem("Entry4pm", JSON.stringify($("#btn4").val()));
+    //console.log(value4pm);
+ });
+
+ button5.click(function(event){
+    var value5pm = $("#div5").val();
+    localStorage.setItem("Entry5pm", JSON.stringify($("#btn5").val()));
+    //console.log(value5pm)
 });
  
-function setItems(){
+ function setItems(){
     localStorage.setItem("Entry9am", div9.val());
     localStorage.setItem("Entry10am", div10.val());
     localStorage.setItem("Entry11am", div11.val());
@@ -52,19 +95,19 @@ function setItems(){
     localStorage.setItem("Entry3pm", div3.val());
     localStorage.setItem("Entry4pm", div4.val());
     localStorage.setItem("Entry5pm", div5.val());
-}
+ }
 
  setItems();
    // html id's
- var div9 = $("#entry9am");
- var div10 = $("#entry10pm");
- var div11 = $("#entry11pm");
- var div12 = $("#entry12pm");
- var div1 = $("#entry1pm");
- var div2 = $("#entry2pm");
- var div3 = $("#entry3pm");
- var div4 = $("#entry4pm");
- var div5 = $("#entry5pm");
+ var div9 = $("#Entry9am");
+ var div10 = $("#Entry10pm");
+ var div11 = $("#Entry11pm");
+ var div12 = $("#Entry12pm");
+ var div1 = $("#Entry1pm");
+ var div2 = $("#Entry2pm");
+ var div3 = $("#Entry3pm");
+ var div4 = $("#Entry4pm");
+ var div5 = $("#Entry5pm");
 
   //HTML id link to variables
  
@@ -72,7 +115,7 @@ function setItems(){
   
   function getItems (){
     var prevEntry1pm = localStorage.getItem("Entry1pm");
-    console.log(prevEntry1pm);
+    //console.log(prevEntry1pm);
     var prevEntry2pm = localStorage.getItem("Entry2pm");
     var prevEntry3pm = localStorage.getItem("Entry3pm");
     var prevEntry4pm = localStorage.getItem("Entry4pm");
@@ -116,7 +159,7 @@ function setItems(){
     $(".jumbotron").append(".display");
 
  }
-
+   var timeblock = $(".timeblock")
  function timeblock(){
     if (currentDay(div12.attr("data-hour")) > today){
         div12.removeClass("past present future");

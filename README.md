@@ -17,7 +17,7 @@ https://ositanduka.github.io/Third-Party-APIs-Daily-Planner-App/
 
 This is an App that allows an employee with a busy shedule to add important events to a daily planner so that they can manage their time effectively.
 
-![AppScreenshort](C:\Users\USER\bootcamp\Third-Party-APIs-Daily-Planner-App\assets\Work Day Scheduler.PNG)
+![AppScreenshort](../Third-Party-APIs-Daily-Planner-App/assets/Work%20Day%20Scheduler.PNG)
 
 
 ## Credits

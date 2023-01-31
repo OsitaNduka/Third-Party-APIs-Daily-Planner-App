@@ -10,14 +10,14 @@ The App color-code each timeblock based on past, present and future when the tim
 
 The App saves the event in the local storage when the the save button is clicked in that timeblock and persits events between refreshes of a page.
 
-
+https://ositanduka.github.io/Third-Party-APIs-Daily-Planner-App/
 
 
 ## Usage
 
 This is an App that allows an employee with a busy shedule to add important events to a daily planner so that they can manage their time effectively.
 
-![AppScreenshort]()
+![AppScreenshort](C:\Users\USER\bootcamp\Third-Party-APIs-Daily-Planner-App\assets\Work Day Scheduler.PNG)
 
 
 ## Credits
